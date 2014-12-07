@@ -96,7 +96,7 @@
       for (var i = 0; i < 1000; i+= 1) {
         var ruler = document.createElement('div');
         ruler.style.cssText = 'font-family: test; font-weight: ' + i;
-        ruler.textContent = 'x ' + i;
+        ruler.innerHTML = 'x---' + i;
 
         container.appendChild(ruler);
       }
