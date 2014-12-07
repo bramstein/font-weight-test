@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <title>font-weight: banana</title>
+    <meta charset="utf-8">
+    <style>
+      @font-face {
+        font-family: test;
+        src: url(../dist/100.eot?#iefix) format('embedded-opentype'),
+             url(../dist/100.woff2) format('woff2'),
+             url(../dist/100.woff) format('woff'),
+             url(../dist/100.ttf) format('truetype');
+        font-weight: 100;
+      }
+
+      @font-face {
+        font-family: test;
+        src: url(../dist/200.eot?#iefix) format('embedded-opentype'),
+             url(../dist/200.woff2) format('woff2'),
+             url(../dist/200.woff) format('woff'),
+             url(../dist/200.ttf) format('truetype');
+        font-weight: 200;
+      }
+      @font-face {
+        font-family: test;
+        src: url(../dist/300.eot?#iefix) format('embedded-opentype'),
+             url(../dist/300.woff2) format('woff2'),
+             url(../dist/300.woff) format('woff'),
+             url(../dist/300.ttf) format('truetype');
+        font-weight: 300;
+      }
+      @font-face {
+        font-family: test;
+        src: url(../dist/400.eot?#iefix) format('embedded-opentype'),
+             url(../dist/400.woff2) format('woff2'),
+             url(../dist/400.woff) format('woff'),
+             url(../dist/400.ttf) format('truetype');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: test;
+        src: url(../dist/500.eot?#iefix) format('embedded-opentype'),
+             url(../dist/500.woff2) format('woff2'),
+             url(../dist/500.woff) format('woff'),
+             url(../dist/500.ttf) format('truetype');
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: test;
+        src: url(../dist/600.eot?#iefix) format('embedded-opentype'),
+             url(../dist/600.woff2) format('woff2'),
+             url(../dist/600.woff) format('woff'),
+             url(../dist/600.ttf) format('truetype');
+        font-weight: 600;
+      }
+      @font-face {
+        font-family: test;
+        src: url(../dist/700.eot?#iefix) format('embedded-opentype'),
+             url(../dist/700.woff2) format('woff2'),
+             url(../dist/700.woff) format('woff'),
+             url(../dist/700.ttf) format('truetype');
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: test;
+        src: url(../dist/800.eot?#iefix) format('embedded-opentype'),
+             url(../dist/800.woff2) format('woff2'),
+             url(../dist/800.woff) format('woff'),
+             url(../dist/800.ttf) format('truetype');
+        font-weight: 800;
+      }
+      @font-face {
+        font-family: test;
+        src: url(../dist/900.eot?#iefix) format('embedded-opentype'),
+             url(../dist/900.woff2) format('woff2'),
+             url(../dist/900.woff) format('woff'),
+             url(../dist/900.ttf) format('truetype');
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="font-family: test; font-weight: 100;">x 100</div>
+    <div style="font-family: test; font-weight: 200;">x 200</div>
+    <div style="font-family: test; font-weight: 300;">x 300</div>
+    <div style="font-family: test; font-weight: 400;">x 400</div>
+    <div style="font-family: test; font-weight: 500;">x 500</div>
+    <div style="font-family: test; font-weight: 600;">x 600</div>
+    <div style="font-family: test; font-weight: 700;">x 700</div>
+    <div style="font-family: test; font-weight: 800;">x 800</div>
+    <div style="font-family: test; font-weight: 900;">x 900</div>
+
+    <script>
+      var container = document.createDocumentFragment();
+
+      for (var i = 0; i < 1000; i+= 1) {
+        var ruler = document.createElement('div');
+        ruler.style.cssText = 'font-family: test; font-weight: ' + i;
+        ruler.textContent = 'x ' + i;
+
+        container.appendChild(ruler);
+      }
+
+      document.body.appendChild(container);
+    </script>
+  </body>
+</html>
